@@ -1,0 +1,116 @@
+
+.order-container.data-v-2a6aaf81 {
+  padding: 20rpx;
+  background-color: #f8f1e9;
+}
+
+/* Tabs样式 */
+.tabs.data-v-2a6aaf81 {
+  width: 100%;
+}
+.tab-bar.data-v-2a6aaf81 {
+  display: flex;
+  height: 80rpx;
+  background-color: #f8f1e9;
+  border-radius: 8rpx;
+  margin-bottom: 20rpx;
+}
+.tab-bar-item.data-v-2a6aaf81 {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28rpx;
+  color: #666;
+  position: relative;
+}
+.tab-bar-item.active.data-v-2a6aaf81 {
+  color: #409EFF;
+  font-weight: bold;
+}
+.tab-bar-item.active.data-v-2a6aaf81::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 4rpx;
+  background-color: #409EFF;
+  border-radius: 2rpx;
+}
+.tab-content.data-v-2a6aaf81 {
+  flex: 1;
+}
+.scroll-view.data-v-2a6aaf81 {
+  height: calc(100vh - 120rpx);
+}
+
+/* 订单项样式 */
+.order-item.data-v-2a6aaf81 {
+  margin: 20rpx 0;
+  padding: 20rpx;
+  border-radius: 8rpx;
+  box-shadow: 0 2rpx 12rpx 0 rgba(0, 0, 0, 0.1);
+}
+.order-header.data-v-2a6aaf81 {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15rpx;
+  font-size: 26rpx;
+  color: #666;
+}
+.order-body.data-v-2a6aaf81 {
+  display: flex;
+  justify-content: space-between;
+  margin: 15rpx 0;
+}
+.product-name.data-v-2a6aaf81 {
+  font-size: 30rpx;
+  font-weight: bold;
+}
+.product-price.data-v-2a6aaf81 {
+  font-size: 30rpx;
+  color: #f56c6c;
+}
+.order-footer.data-v-2a6aaf81 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.status.data-v-2a6aaf81 {
+  padding: 8rpx 16rpx;
+  border-radius: 4rpx;
+  font-size: 24rpx;
+}
+.status.unpaid.data-v-2a6aaf81 {
+  color: #e6a23c;
+  background-color: #fdf6ec;
+}
+.status.paid.data-v-2a6aaf81 {
+  color: #67c23a;
+  background-color: #f0f9eb;
+}
+.pay-time.data-v-2a6aaf81 {
+  font-size: 24rpx;
+  color: #999;
+}
+.loading.data-v-2a6aaf81, .empty.data-v-2a6aaf81 {
+  text-align: center;
+  padding: 40rpx;
+  font-size: 28rpx;
+  color: #999;
+}
+
+/* 按钮样式 */
+button.data-v-2a6aaf81 {
+  margin: 0;
+  font-size: 24rpx;
+  line-height: 1.5;
+}
+button[type="primary"].data-v-2a6aaf81 {
+  background-color: #409EFF;
+  color: white;
+  border: none;
+}
+

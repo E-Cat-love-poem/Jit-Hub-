@@ -1,0 +1,293 @@
+
+.home-container.data-v-7ffebbf4 {
+  background-color: #f8f8f8;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* 头部样式 */
+.header.data-v-7ffebbf4 {
+  padding: 15px;
+  background: #f8f1e7;
+}
+.search-container.data-v-7ffebbf4 {
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  gap: 10px;
+}
+.search.data-v-7ffebbf4 {
+  background: #fff;
+  border-radius: 20px;
+  padding: 10px 15px;
+  font-size: 14px;
+  flex: 1;
+  border: 1px solid #e0e0e0;
+}
+.search-container button.data-v-7ffebbf4 {
+  background-color: #d4a762;
+  color: white;
+  border-radius: 20px;
+  font-size: 14px;
+  padding: 0;
+  width: 100px;
+  height: 36px;
+  line-height: 36px;
+  flex-shrink: 0;
+  border: none;
+  outline: none;
+}
+
+/* 搜索结果区域 */
+.search-results.data-v-7ffebbf4 {
+  background: white;
+  border-radius: 8px;
+  margin-top: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.close-results.data-v-7ffebbf4 {
+  color: #999;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+/* 轮播图 */
+.swiper-wrap.data-v-7ffebbf4 {
+  margin-top: 20px;
+  height: 180px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.swiper-wrap image.data-v-7ffebbf4 {
+  width: 100%;
+  height: 100%;
+}
+
+/* 功能导航区域 */
+.function-nav.data-v-7ffebbf4 {
+  padding: 15px;
+  background: white;
+  margin-bottom: 10px;
+}
+.nav-title.data-v-7ffebbf4 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #333;
+}
+.nav-grid.data-v-7ffebbf4 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+.nav-card.data-v-7ffebbf4 {
+  background: #f8f1e9;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s;
+  border: 2px solid transparent;
+}
+.nav-card.data-v-7ffebbf4:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  border-color: #d4a762;
+}
+.nav-card.data-v-7ffebbf4:active {
+  transform: translateY(-2px);
+}
+.nav-icon.data-v-7ffebbf4 {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 10px;
+  display: block;
+}
+.nav-text.data-v-7ffebbf4 {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  display: block;
+  margin-bottom: 5px;
+}
+.nav-desc.data-v-7ffebbf4 {
+  font-size: 12px;
+  color: #888;
+  display: block;
+}
+
+/* 主体内容 */
+.body.data-v-7ffebbf4 {
+  padding-bottom: 50px;
+}
+.section-title.data-v-7ffebbf4 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  background: #f8f1e9;
+  margin: 10px 0;
+}
+.more.data-v-7ffebbf4 {
+  font-size: 12px;
+  color: #999;
+  font-weight: normal;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+.more.data-v-7ffebbf4:active {
+  color: #d4a762;
+}
+
+/* 商品网格 */
+.crafts-grid.data-v-7ffebbf4 {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 10px;
+  gap: 10px;
+  justify-content: space-between;
+}
+.craft-item.data-v-7ffebbf4 {
+  width: calc(50% - 5px);
+  background: #f8f1e9;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+.craft-item.data-v-7ffebbf4:active {
+  transform: translateY(-2px);
+}
+.craft-item image.data-v-7ffebbf4 {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+}
+.craft-info.data-v-7ffebbf4 {
+  padding: 10px;
+}
+.craft-name.data-v-7ffebbf4 {
+  font-size: 14px;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 4px;
+  color: #333;
+}
+.craft-origin.data-v-7ffebbf4 {
+  font-size: 12px;
+  color: #888;
+  display: block;
+  margin-bottom: 4px;
+}
+.craft-desc.data-v-7ffebbf4 {
+  font-size: 12px;
+  color: #666;
+  display: block;
+  line-height: 1.4;
+  margin-bottom: 6px;
+}
+.craft-price.data-v-7ffebbf4 {
+  font-size: 14px;
+  color: #e4393c;
+  font-weight: bold;
+  display: block;
+}
+
+/* 教师列表 */
+.masters-list.data-v-7ffebbf4 {
+  padding: 0 15px;
+}
+.master-card.data-v-7ffebbf4 {
+  display: flex;
+  background: #f8f1e9;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+.master-card.data-v-7ffebbf4:active {
+  transform: translateX(5px);
+}
+.master-card image.data-v-7ffebbf4 {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+.master-info.data-v-7ffebbf4 {
+  flex: 1;
+  padding: 10px;
+}
+.master-name.data-v-7ffebbf4 {
+  font-size: 15px;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 4px;
+  color: #333;
+}
+.master-skill.data-v-7ffebbf4 {
+  font-size: 13px;
+  color: #d4a762;
+  display: block;
+  margin-bottom: 4px;
+}
+.master-desc.data-v-7ffebbf4 {
+  font-size: 12px;
+  color: #666;
+  display: block;
+  line-height: 1.4;
+}
+
+/* 页脚 */
+.foot.data-v-7ffebbf4 {
+  text-align: center;
+  padding: 20px 0;
+  color: #999;
+  font-size: 12px;
+  background: white;
+  border-top: 1px solid #f8f1e9;
+}
+
+/* 加载蒙层 */
+.loading-mask.data-v-7ffebbf4 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+.loading-content.data-v-7ffebbf4 {
+  background: white;
+  padding: 20px 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  font-size: 14px;
+  color: #333;
+}
+
+/* 响应式设计 */
+@media (min-width: 768px) {
+.crafts-grid.data-v-7ffebbf4 {
+    justify-content: flex-start;
+}
+.craft-item.data-v-7ffebbf4 {
+    width: calc(33.333% - 10px);
+}
+.swiper-wrap.data-v-7ffebbf4 {
+    height: 300px;
+}
+.nav-grid.data-v-7ffebbf4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+}

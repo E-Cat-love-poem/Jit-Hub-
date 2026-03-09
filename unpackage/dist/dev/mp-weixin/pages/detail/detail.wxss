@@ -1,0 +1,148 @@
+
+.detail-page.data-v-eca06f3c {
+  min-height: 100vh;
+  background: #f8f1e7;
+  padding-bottom: 100rpx;
+}
+
+/* 顶层样式 */
+.top-section.data-v-eca06f3c {
+  background: #f8f1e7;
+}
+.main-image.data-v-eca06f3c {
+  width: 100%;
+  display: block;
+  border-bottom: 1rpx solid #e8d8b5;
+}
+
+/* 中层样式 */
+.middle-section.data-v-eca06f3c {
+  padding: 20rpx 30rpx 120rpx;
+}
+
+/* 信息卡片 */
+.info-card.data-v-eca06f3c {
+  background: #fff9f0;
+  border-radius: 16rpx;
+  padding: 30rpx;
+  margin-bottom: 30rpx;
+  border: 1rpx solid #e8d8b5;
+}
+.product-name.data-v-eca06f3c {
+  font-size: 38rpx;
+  font-weight: bold;
+  color: #5a3921;
+  display: block;
+}
+.product-origin.data-v-eca06f3c {
+  font-size: 28rpx;
+  color: #8c7b6b;
+  margin: 10rpx 0;
+  display: block;
+}
+.price.data-v-eca06f3c {
+  font-size: 42rpx;
+  color: #c33b2b;
+  font-weight: bold;
+}
+
+/* 文化卡片 */
+.culture-card.data-v-eca06f3c, .craft-card.data-v-eca06f3c {
+  background: white;
+  border-radius: 16rpx;
+  padding: 30rpx;
+  margin-bottom: 30rpx;
+  box-shadow: 0 4rpx 12rpx rgba(0,0,0,0.05);
+}
+.section-title.data-v-eca06f3c {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25rpx;
+  font-size: 32rpx;
+  color: #5a3921;
+  font-weight: bold;
+}
+.title-icon.data-v-eca06f3c {
+  width: 36rpx;
+  height: 36rpx;
+  margin-right: 15rpx;
+}
+.culture-desc.data-v-eca06f3c {
+  font-size: 28rpx;
+  line-height: 1.8;
+  color: #666;
+  display: block;
+}
+
+/* 制作工艺内容 */
+.craft-content.data-v-eca06f3c {
+  font-size: 28rpx;
+  line-height: 1.6;
+  color: #666;
+}
+
+/* 底部按钮 */
+.bottom-section.data-v-eca06f3c {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100rpx;
+  display: flex;
+  background: white;
+  box-shadow: 0 -2rpx 10rpx rgba(0,0,0,0.1);
+  z-index: 100;
+}
+.btn.data-v-eca06f3c {
+  flex: 1;
+  border-radius: 0;
+  font-size: 32rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.btn.data-v-eca06f3c:active {
+  opacity: 0.9;
+}
+.buy.data-v-eca06f3c {
+  background: #e4393c;
+  color: white;
+  font-weight: bold;
+}
+
+/* 加载动画 */
+.loading.data-v-eca06f3c {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f8f1e7;
+}
+.loading image.data-v-eca06f3c {
+  width: 120rpx;
+  height: 120rpx;
+}
+
+/* 响应式设计 */
+@media (min-width: 768px) {
+.middle-section.data-v-eca06f3c {
+    padding: 40rpx 60rpx 140rpx;
+    max-width: 750rpx;
+    margin: 0 auto;
+}
+.info-card.data-v-eca06f3c, 
+  .culture-card.data-v-eca06f3c, 
+  .craft-card.data-v-eca06f3c {
+    padding: 40rpx;
+}
+.product-name.data-v-eca06f3c {
+    font-size: 42rpx;
+}
+.price.data-v-eca06f3c {
+    font-size: 48rpx;
+}
+}

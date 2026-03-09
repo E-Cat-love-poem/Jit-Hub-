@@ -1,0 +1,190 @@
+
+/* 基础样式 */
+.team-container.data-v-13a78ac6 {
+  padding: 20rpx;
+  background-color: #f9f5f0;
+  min-height: 100vh;
+}
+
+/* 页面标题 */
+.page-header.data-v-13a78ac6 {
+  text-align: center;
+  padding: 30rpx 0;
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #5a3921;
+}
+
+/* 团队卡片 */
+.team-card.data-v-13a78ac6 {
+  background-color: #fff;
+  border-radius: 16rpx;
+  padding: 40rpx;
+  margin: 20rpx 0;
+  text-align: center;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.05);
+}
+.team-logo.data-v-13a78ac6 {
+  width: 150rpx;
+  height: 150rpx;
+  margin-bottom: 20rpx;
+  border-radius: 50%;
+}
+.team-name.data-v-13a78ac6 {
+  display: block;
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-bottom: 10rpx;
+  color: #5a3921;
+}
+.team-slogan.data-v-13a78ac6 {
+  display: block;
+  font-size: 26rpx;
+  color: #8d6e63;
+}
+
+/* 信息区块 */
+.info-section.data-v-13a78ac6 {
+  background-color: #fff;
+  border-radius: 16rpx;
+  margin: 20rpx 0;
+  padding: 0 20rpx;
+}
+.info-item.data-v-13a78ac6 {
+  display: flex;
+  align-items: center;
+  padding: 30rpx 0;
+  border-bottom: 1rpx solid #f0e6d9;
+}
+.info-item.data-v-13a78ac6:last-child {
+  border-bottom: none;
+}
+.info-icon.data-v-13a78ac6 {
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 20rpx;
+}
+.info-content.data-v-13a78ac6 {
+  flex: 1;
+}
+.info-title.data-v-13a78ac6 {
+  font-size: 30rpx;
+  font-weight: bold;
+  color: #5a3921;
+  margin-bottom: 8rpx;
+  display: block;
+}
+.info-desc.data-v-13a78ac6 {
+  font-size: 26rpx;
+  color: #8d6e63;
+  display: block;
+  line-height: 1.5;
+}
+
+/* 联系方式 */
+.contact-section.data-v-13a78ac6 {
+  background-color: #fff;
+  border-radius: 16rpx;
+  margin: 20rpx 0;
+  padding: 30rpx 20rpx;
+}
+.section-title.data-v-13a78ac6 {
+  display: block;
+  font-size: 30rpx;
+  font-weight: bold;
+  color: #5a3921;
+  margin-bottom: 25rpx;
+  padding-bottom: 15rpx;
+  border-bottom: 1rpx solid #f0e6d9;
+}
+.contact-item.data-v-13a78ac6 {
+  display: flex;
+  align-items: center;
+  padding: 20rpx 0;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.contact-item.data-v-13a78ac6:active {
+  background-color: rgba(0, 0, 0, 0.02);
+  border-radius: 8rpx;
+  transform: scale(0.99);
+}
+.contact-icon.data-v-13a78ac6 {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 20rpx;
+}
+
+/* 响应式设计 */
+@media (min-width: 768px) {
+.team-container.data-v-13a78ac6 {
+    max-width: 750rpx;
+    margin: 0 auto;
+    padding: 40rpx;
+}
+.page-header.data-v-13a78ac6 {
+    font-size: 44rpx;
+    padding: 40rpx 0;
+}
+.team-card.data-v-13a78ac6 {
+    padding: 60rpx 40rpx;
+}
+.team-logo.data-v-13a78ac6 {
+    width: 180rpx;
+    height: 180rpx;
+}
+.team-name.data-v-13a78ac6 {
+    font-size: 38rpx;
+}
+.team-slogan.data-v-13a78ac6 {
+    font-size: 30rpx;
+}
+.info-section.data-v-13a78ac6,
+  .contact-section.data-v-13a78ac6 {
+    padding: 40rpx;
+}
+.info-title.data-v-13a78ac6 {
+    font-size: 32rpx;
+}
+.info-desc.data-v-13a78ac6 {
+    font-size: 28rpx;
+}
+.section-title.data-v-13a78ac6 {
+    font-size: 34rpx;
+}
+}
+
+/* 暗色模式适配 */
+@media (prefers-color-scheme: dark) {
+.team-container.data-v-13a78ac6 {
+    background-color: #1a1a1a;
+}
+.page-header.data-v-13a78ac6 {
+    color: #e6e6e6;
+}
+.team-card.data-v-13a78ac6,
+  .info-section.data-v-13a78ac6,
+  .contact-section.data-v-13a78ac6 {
+    background-color: #2d2d2d;
+}
+.team-name.data-v-13a78ac6 {
+    color: #e6e6e6;
+}
+.team-slogan.data-v-13a78ac6,
+  .info-desc.data-v-13a78ac6 {
+    color: #b3b3b3;
+}
+.info-title.data-v-13a78ac6,
+  .section-title.data-v-13a78ac6 {
+    color: #e6e6e6;
+}
+.info-item.data-v-13a78ac6 {
+    border-bottom-color: #404040;
+}
+.section-title.data-v-13a78ac6 {
+    border-bottom-color: #404040;
+}
+.contact-item.data-v-13a78ac6:active {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+}

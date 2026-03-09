@@ -1,0 +1,100 @@
+
+.index.data-v-0f7520f0 {
+  min-height: 100vh;
+  background-color: #f8f1e9;
+}
+
+/* 头部样式 */
+.header.data-v-0f7520f0 {
+  display: flex;
+  align-items: center;
+  padding: 30rpx;
+  background-color: #fff;
+  margin-bottom: 20rpx;
+}
+.box-1 image.data-v-0f7520f0 {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  border: 2rpx solid #eee;
+}
+.box-2.data-v-0f7520f0 {
+  flex: 1;
+  margin-left: 30rpx;
+}
+.bt button.data-v-0f7520f0 {
+  margin: 0;
+  font-size: 24rpx;
+  line-height: 1.5;
+  background-color: #07C160;
+  color: white;
+  border: none;
+}
+.bt button.data-v-0f7520f0:active {
+  opacity: 0.8;
+}
+
+/* 等级进度条样式 */
+.body.data-v-0f7520f0 {
+  padding: 30rpx;
+  background-color: #fff;
+  margin-bottom: 20rpx;
+}
+.body progress.data-v-0f7520f0 {
+  margin-top: 20rpx;
+}
+.box.data-v-0f7520f0 {
+  height: 20rpx;
+}
+
+/* 底部菜单样式 */
+.foot.data-v-0f7520f0 {
+  background-color: #fff;
+  padding: 20rpx 0;
+}
+.menu-list.data-v-0f7520f0 {
+  display: flex;
+  flex-direction: column;
+}
+.menu-item.data-v-0f7520f0 {
+  display: flex;
+  align-items: center;
+  padding: 25rpx 30rpx;
+  border-bottom: 1rpx solid #f0f0f0;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.menu-item.data-v-0f7520f0:active {
+  background-color: #f9f9f9;
+}
+.menu-item image.data-v-0f7520f0 {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 20rpx;
+}
+.menu-item text.data-v-0f7520f0 {
+  font-size: 30rpx;
+  color: #333;
+}
+
+/* 最后一个菜单项特殊样式 */
+.menu-item.data-v-0f7520f0:last-child {
+  color: #ff6b6b;
+}
+.menu-item:last-child text.data-v-0f7520f0 {
+  color: #ff6b6b;
+}
+
+/* 响应式设计 */
+@media (min-width: 768px) {
+.header.data-v-0f7520f0 {
+    padding: 40rpx 60rpx;
+}
+.body.data-v-0f7520f0 {
+    padding: 40rpx 60rpx;
+}
+.menu-item.data-v-0f7520f0 {
+    padding: 30rpx 60rpx;
+}
+}
+

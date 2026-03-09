@@ -1,0 +1,168 @@
+
+.purchased-container.data-v-a8e27f3a {
+  background-color: #f8f8f8;
+  min-height: 100vh;
+}
+
+/* 和Home页面一样的section-title */
+.section-title.data-v-a8e27f3a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  background: #f8f1e9;
+  margin-bottom: 10px;
+}
+.scroll-view.data-v-a8e27f3a {
+  height: calc(100vh - 60px);
+  padding-bottom: 20px;
+}
+
+/* 和Home页面一模一样的crafts-grid */
+.crafts-grid.data-v-a8e27f3a {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 10px;
+  gap: 10px;
+  justify-content: space-between;
+}
+.craft-item.data-v-a8e27f3a {
+  width: calc(50% - 5px);
+  background: #f8f1e9;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+.craft-item.data-v-a8e27f3a:active {
+  transform: translateY(-2px);
+}
+.craft-item image.data-v-a8e27f3a {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+}
+.craft-info.data-v-a8e27f3a {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.craft-name.data-v-a8e27f3a {
+  font-size: 14px;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 4px;
+  color: #333;
+  line-height: 1.3;
+}
+.craft-origin.data-v-a8e27f3a {
+  font-size: 12px;
+  color: #888;
+  display: block;
+  margin-bottom: 4px;
+}
+.craft-desc.data-v-a8e27f3a {
+  font-size: 12px;
+  color: #666;
+  display: block;
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+
+/* 进度条样式 */
+.progress-container.data-v-a8e27f3a {
+  margin: 8px 0;
+}
+.progress-text.data-v-a8e27f3a {
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 4px;
+  transition: color 0.3s;
+}
+
+/* 当进度100%时，进度文字显示为绿色 */
+.progress-text.completed.data-v-a8e27f3a {
+  color: #67C23A;
+  font-weight: bold;
+}
+.progress-bar.data-v-a8e27f3a {
+  width: 100%;
+  height: 6px;
+  background-color: #e0e0e0;
+  border-radius: 3px;
+  overflow: hidden;
+}
+.progress-inner.data-v-a8e27f3a {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.5s ease-in-out, background 0.3s ease;
+}
+
+/* 完成徽章 */
+.complete-badge.data-v-a8e27f3a {
+  display: inline-block;
+  margin-left: 5px;
+  color: #67C23A;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* 底部区域 */
+.bottom-section.data-v-a8e27f3a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+}
+.craft-price.data-v-a8e27f3a {
+  font-size: 14px;
+  color: #e4393c;
+  font-weight: bold;
+}
+
+/* 立即学习按钮 */
+.study-btn.data-v-a8e27f3a {
+  background: linear-gradient(135deg, #409EFF, #66b1ff);
+  color: white;
+  border: none;
+  border-radius: 15px;
+  padding: 4px 12px;
+  font-size: 12px;
+  min-height: auto;
+  line-height: 1.5;
+  transition: all 0.3s;
+}
+
+/* 已完成按钮样式 */
+.study-btn.completed.data-v-a8e27f3a {
+  background: #C0C4CC !important;
+  color: #FFFFFF !important;
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+.study-btn.data-v-a8e27f3a:active:not(.completed) {
+  opacity: 0.8;
+  transform: scale(0.95);
+}
+.study-btn[disabled].data-v-a8e27f3a {
+  opacity: 1 !important;
+  transform: none !important;
+}
+.loading.data-v-a8e27f3a, .empty.data-v-a8e27f3a {
+  text-align: center;
+  padding: 40px 20px;
+  color: #999;
+  font-size: 14px;
+}
+
+/* 响应式调整 */
+@media (min-width: 768px) {
+.crafts-grid.data-v-a8e27f3a {
+    justify-content: flex-start;
+}
+.craft-item.data-v-a8e27f3a {
+    width: calc(33.333% - 10px);
+}
+}
