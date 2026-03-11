@@ -1,0 +1,355 @@
+
+/* 页面样式 */
+.page.data-v-f3924085 {
+  box-sizing: border-box;
+  padding-bottom: calc(env(safe-area-inset-bottom) + 96rpx);
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: #f8f1e7; /* 添加统一的背景色 */
+}
+.test.data-v-f3924085 {
+  height: 150rpx;
+}
+
+/* 加大标题字体 */
+.header.data-v-f3924085 {
+  padding: 40rpx 0 40rpx 40rpx;
+  font-size: 48rpx; /* 从42rpx增大到48rpx */
+  font-weight: bold; /* 使用bold，bolder在某些手机上可能不兼容 */
+  color: #5a3921; /* 使用主题色 */
+  margin-top: 20rpx;
+  line-height: 1.4;
+  letter-spacing: 1rpx; /* 添加字间距，看起来更舒服 */
+}
+.body.data-v-f3924085 {
+  background-color: rgba(90, 57, 33, 0.1); /* 使用主题色半透明 */
+  height: 600rpx;
+  margin: 30rpx 50rpx;
+  border-radius: 20rpx;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 2rpx solid rgba(90, 57, 33, 0.2); /* 添加边框 */
+}
+.body.data-v-f3924085:active {
+  transform: scale(0.98);
+  background-color: rgba(90, 57, 33, 0.15);
+  box-shadow: 0 6rpx 20rpx rgba(90, 57, 33, 0.2);
+}
+
+/* 新增上传盒子样式 */
+.upload-box.data-v-f3924085 {
+  background: linear-gradient(135deg, rgba(212, 167, 98, 0.1), rgba(90, 57, 33, 0.1));
+  height: auto;
+  margin: 30rpx 50rpx;
+  padding: 40rpx 35rpx 50rpx 55rpx;
+  border-radius: 20rpx;
+  border: 2rpx solid rgba(90, 57, 33, 0.2);
+  box-shadow: 0 4rpx 15rpx rgba(90, 57, 33, 0.1);
+}
+.upload-title.data-v-f3924085 {
+  font-size: 40rpx;
+  font-weight: bold;
+  color: #5a3921;
+  text-align: center;
+  margin-bottom: 40rpx;
+  line-height: 1.5;
+}
+.upload-link.data-v-f3924085 {
+  display: block;
+  text-decoration: none;
+  width: 100%;
+}
+.upload-btn.data-v-f3924085 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100rpx;
+  background: linear-gradient(135deg, #d4a762, #b89350);
+  border: none;
+  border-radius: 50rpx;
+  color: white;
+  font-size: 36rpx;
+  font-weight: bold;
+  box-shadow: 0 6rpx 20rpx rgba(180, 140, 80, 0.3);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+.upload-btn.data-v-f3924085::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.upload-btn.data-v-f3924085:active {
+  transform: translateY(4rpx);
+  box-shadow: 0 2rpx 10rpx rgba(180, 140, 80, 0.3);
+}
+.upload-btn.data-v-f3924085:active::after {
+  opacity: 1;
+}
+.upload-btn-text.data-v-f3924085 {
+  margin-right: 15rpx;
+  letter-spacing: 2rpx;
+}
+.upload-btn-icon.data-v-f3924085 {
+  font-size: 42rpx;
+  font-weight: bold;
+  transform: translateY(-2rpx);
+}
+
+/* 加大脚注字体 */
+.foot.data-v-f3924085 {
+  background-color: rgba(212, 167, 98, 0.15); /* 使用金色半透明 */
+  height: auto;
+  min-height: 250rpx; /* 增加最小高度 */
+  margin: 25rpx 50rpx;
+  padding: 40rpx 35rpx 40rpx 55rpx; /* 增加内边距 */
+  border-radius: 20rpx;
+  border: 2rpx solid rgba(212, 167, 98, 0.3);
+}
+
+/* 加大文本字体 */
+.foot-item.data-v-f3924085 {
+  display: block;
+  font-size: 38rpx; /* 从32rpx增大到38rpx */
+  line-height: 1.8; /* 增加行高 */
+  color: #5a3921; /* 使用主题色 */
+  margin-bottom: 25rpx; /* 增加间距 */
+  padding-left: 10rpx;
+  border-left: 4rpx solid #d4a762; /* 添加装饰线 */
+}
+.foot-item.data-v-f3924085:last-child {
+  margin-bottom: 0;
+}
+
+/* 特殊强调最后一句 */
+.foot-item.data-v-f3924085:last-child {
+  color: #c33b2b; /* 特殊强调色 */
+  font-weight: bold;
+  font-size: 40rpx;
+  border-left-color: #c33b2b;
+}
+image.data-v-f3924085 {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  padding: 30rpx; /* 增加图片内边距 */
+}
+
+/* 点击效果 */
+navigator.data-v-f3924085 {
+  display: block;
+  text-decoration: none;
+}
+
+/* 响应式设计 - 大屏 */
+@media (min-width: 768px) {
+.header.data-v-f3924085 {
+    font-size: 56rpx; /* 在大屏上更大 */
+    padding: 50rpx 0 50rpx 80rpx;
+    max-width: 1200rpx;
+    margin: 0 auto;
+}
+.body.data-v-f3924085 {
+    height: 700rpx;
+    max-width: 1200rpx;
+    margin: 40rpx auto;
+    border-radius: 30rpx;
+}
+.upload-box.data-v-f3924085 {
+    max-width: 1200rpx;
+    margin: 40rpx auto;
+    padding: 50rpx 50rpx 60rpx 50rpx;
+    border-radius: 30rpx;
+}
+.upload-title.data-v-f3924085 {
+    font-size: 46rpx;
+    margin-bottom: 50rpx;
+}
+.upload-btn.data-v-f3924085 {
+    height: 120rpx;
+    font-size: 40rpx;
+    border-radius: 60rpx;
+    max-width: 600rpx;
+    margin: 0 auto;
+}
+.upload-btn-icon.data-v-f3924085 {
+    font-size: 48rpx;
+}
+.foot.data-v-f3924085 {
+    max-width: 1200rpx;
+    margin: 40rpx auto;
+    padding: 50rpx 50rpx 50rpx 70rpx;
+    border-radius: 30rpx;
+}
+.foot-item.data-v-f3924085 {
+    font-size: 42rpx;
+    line-height: 2;
+    margin-bottom: 30rpx;
+}
+.foot-item.data-v-f3924085:last-child {
+    font-size: 44rpx;
+}
+}
+
+/* 响应式设计 - 小屏 */
+@media (max-width: 480px) {
+.header.data-v-f3924085 {
+    font-size: 40rpx;
+    padding: 30rpx 0 30rpx 30rpx;
+}
+.body.data-v-f3924085 {
+    height: 500rpx;
+    margin: 20rpx 30rpx;
+}
+.upload-box.data-v-f3924085 {
+    margin: 20rpx 30rpx;
+    padding: 30rpx 25rpx 40rpx 25rpx;
+}
+.upload-title.data-v-f3924085 {
+    font-size: 36rpx;
+    margin-bottom: 30rpx;
+}
+.upload-btn.data-v-f3924085 {
+    height: 90rpx;
+    font-size: 32rpx;
+}
+.upload-btn-icon.data-v-f3924085 {
+    font-size: 38rpx;
+}
+.foot.data-v-f3924085 {
+    margin: 20rpx 30rpx;
+    padding: 30rpx 25rpx 30rpx 35rpx;
+}
+.foot-item.data-v-f3924085 {
+    font-size: 32rpx;
+    line-height: 1.6;
+    margin-bottom: 20rpx;
+}
+.foot-item.data-v-f3924085:last-child {
+    font-size: 34rpx;
+}
+}
+
+/* 平板设备适配 */
+@media (min-width: 481px) and (max-width: 767px) {
+.header.data-v-f3924085 {
+    font-size: 44rpx;
+    padding: 35rpx 0 35rpx 40rpx;
+}
+.body.data-v-f3924085 {
+    height: 550rpx;
+    margin: 25rpx 40rpx;
+}
+.upload-box.data-v-f3924085 {
+    margin: 25rpx 40rpx;
+    padding: 35rpx 30rpx 45rpx 30rpx;
+}
+.upload-title.data-v-f3924085 {
+    font-size: 42rpx;
+    margin-bottom: 35rpx;
+}
+.upload-btn.data-v-f3924085 {
+    height: 100rpx;
+    font-size: 38rpx;
+}
+.upload-btn-icon.data-v-f3924085 {
+    font-size: 44rpx;
+}
+.foot.data-v-f3924085 {
+    margin: 25rpx 40rpx;
+    padding: 35rpx 30rpx 35rpx 50rpx;
+}
+.foot-item.data-v-f3924085 {
+    font-size: 36rpx;
+    line-height: 1.7;
+    margin-bottom: 22rpx;
+}
+.foot-item.data-v-f3924085:last-child {
+    font-size: 38rpx;
+}
+}
+
+/* 防止背景图在部分浏览器中不显示 */
+@supports not (background-attachment: fixed) {
+.page.data-v-f3924085 {
+    background-attachment: scroll;
+}
+}
+
+/* 添加优雅的进入动画 */
+.page.data-v-f3924085 {
+  animation: fadeIn-f3924085 0.5s ease-out;
+}
+@keyframes fadeIn-f3924085 {
+from {
+    opacity: 0;
+    transform: translateY(20rpx);
+}
+to {
+    opacity: 1;
+    transform: translateY(0);
+}
+}
+
+/* 为可点击元素添加光标提示 */
+.body.data-v-f3924085, .upload-btn.data-v-f3924085 {
+  cursor: pointer;
+}
+
+/* 深色模式适配 */
+@media (prefers-color-scheme: dark) {
+.page.data-v-f3924085 {
+    background-color: #1a1a1a;
+}
+.header.data-v-f3924085 {
+    color: #e6e6e6;
+}
+.body.data-v-f3924085 {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+.upload-box.data-v-f3924085 {
+    background: linear-gradient(135deg, rgba(212, 167, 98, 0.15), rgba(90, 57, 33, 0.15));
+    border-color: rgba(212, 167, 98, 0.3);
+}
+.upload-title.data-v-f3924085 {
+    color: #e6e6e6;
+}
+.upload-btn.data-v-f3924085 {
+    background: linear-gradient(135deg, #b89350, #9a7a40);
+}
+.foot.data-v-f3924085 {
+    background-color: rgba(212, 167, 98, 0.2);
+    border-color: rgba(212, 167, 98, 0.3);
+}
+.foot-item.data-v-f3924085 {
+    color: #e6e6e6;
+    border-left-color: #d4a762;
+}
+.foot-item.data-v-f3924085:last-child {
+    color: #ff6b6b;
+    border-left-color: #ff6b6b;
+}
+}
+
+/* 上传按钮悬停效果（在支持悬停的设备上） */
+@media (hover: hover) and (pointer: fine) {
+.upload-btn.data-v-f3924085:hover {
+    transform: translateY(-2rpx);
+    box-shadow: 0 8rpx 25rpx rgba(180, 140, 80, 0.4);
+}
+.upload-btn.data-v-f3924085:hover::after {
+    opacity: 1;
+}
+}

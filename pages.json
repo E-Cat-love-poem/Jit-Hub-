@@ -1,0 +1,113 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		
+		{
+			"path": "pages/Login/Login",
+			"style": {
+			}
+		},
+		{
+			"path": "pages/Home/Home",
+			"style": {
+			}
+		},
+		{
+			"path": "pages/Register/Register",
+			"style": {
+			}
+		},
+		{
+			"path": "pages/detail/detail",
+			"style": {
+			}
+		},
+		{
+			"path": "pages/user/user",
+			"style": {
+			}
+		},
+		{
+			"path": "pages/yue/yue",
+			"style": {
+			}
+		},
+		{
+			"path": "pages/shop/shop",
+			"style": {
+			}
+		},
+		{
+			"path": "pages/about/about",
+			"style": {
+			}
+		},
+		{
+			"path": "pages/chat/chat",
+			"style": {
+			}
+		},
+		{
+			"path": "pages/upload/upload",
+			"style": {
+			}
+		},
+		{
+			"path": "pages/ai/ai",
+			"style": {
+			}
+		},
+		{
+			"path": "pages/purchased/purchased",
+			"style": {
+			}
+		},
+		{
+			"path": "pages/exam/exam",
+			"style": {
+			}
+		},
+		{
+			"path": "pages/chat2/chat2",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "Jit-Hub学习平台",
+		"navigationBarBackgroundColor": "#f8f1e9"
+	},
+	"uniIdRouter": {},
+	"tabBar": {
+		    "list": [
+		      {
+		        "pagePath": "pages/Home/Home",
+		        "text": "平台主页",
+		        "iconPath": "/static/images/Home.png",
+		        "selectedIconPath": "/static/images/Home.png"
+		      },
+		      {
+		        "pagePath": "pages/yue/yue",
+		        "text": "联系我们",
+		        "iconPath": "/static/images/booking.png",
+		        "selectedIconPath": "/static/images/booking.png"
+		      },
+		      {
+		        "pagePath": "pages/shop/shop",
+		        "text": "课程购买",
+		        "iconPath": "/static/images/shop.png",
+		        "selectedIconPath": "/static/images/shop.png"
+		      },
+		      {
+		        "pagePath": "pages/user/user",
+		        "text": "个人中心",
+		        "iconPath": "/static/images/logo1.png",
+		        "selectedIconPath": "/static/images/logo1.png"
+		      }
+		    ],
+		    "color": "#999",
+		    "selectedColor": "#d4237a",
+		    "backgroundColor": "#f8f1e9"
+		  }
+}

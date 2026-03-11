@@ -1,0 +1,55 @@
+{
+  "pages": [
+    "pages/Login/Login",
+    "pages/Home/Home",
+    "pages/Register/Register",
+    "pages/detail/detail",
+    "pages/user/user",
+    "pages/yue/yue",
+    "pages/shop/shop",
+    "pages/about/about",
+    "pages/chat/chat",
+    "pages/upload/upload",
+    "pages/ai/ai",
+    "pages/purchased/purchased",
+    "pages/exam/exam",
+    "pages/chat2/chat2"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "Jit-Hub学习平台",
+    "navigationBarBackgroundColor": "#f8f1e9"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/Home/Home",
+        "text": "平台主页",
+        "iconPath": "/static/images/Home.png",
+        "selectedIconPath": "/static/images/Home.png"
+      },
+      {
+        "pagePath": "pages/yue/yue",
+        "text": "联系我们",
+        "iconPath": "/static/images/booking.png",
+        "selectedIconPath": "/static/images/booking.png"
+      },
+      {
+        "pagePath": "pages/shop/shop",
+        "text": "课程购买",
+        "iconPath": "/static/images/shop.png",
+        "selectedIconPath": "/static/images/shop.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "个人中心",
+        "iconPath": "/static/images/logo1.png",
+        "selectedIconPath": "/static/images/logo1.png"
+      }
+    ],
+    "color": "#999",
+    "selectedColor": "#d4237a",
+    "backgroundColor": "#f8f1e9"
+  },
+  "usingComponents": {}
+}

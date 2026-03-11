@@ -1,0 +1,1 @@
+{"version":3,"file":"chat2.js","sources":["V:/WorkSoftware/HBuilderX/HBuilderX/plugins/uniapp-cli-vite/uniPage:/cGFnZXMvY2hhdDIvY2hhdDIudnVl"],"sourcesContent":["import MiniProgramPage from 'C:/Users/72888/Desktop/Temporary File Site-First/学习平台（HX）/pages/chat2/chat2.vue'\nwx.createPage(MiniProgramPage)"],"names":[],"mappings":";;;;;;;AACA,GAAG,WAAW,eAAe;"}

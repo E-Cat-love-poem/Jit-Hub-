@@ -1,0 +1,69 @@
+
+.login-container.data-v-461d1d79 {
+  padding: 40rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.logo.data-v-461d1d79 {
+  width: 150rpx;
+  height: 150rpx;
+  margin-bottom: 30rpx;
+}
+.title.data-v-461d1d79 {
+  font-size: 36rpx;
+  color: #d4a762;
+  margin-bottom: 80rpx;
+  font-weight: bold;
+}
+.form-group.data-v-461d1d79 {
+  width: 100%;
+  margin-bottom: 40rpx;
+}
+.input.data-v-461d1d79 {
+  width: 100%;
+  height: 80rpx;
+  border-bottom: 1rpx solid #d4a762;
+  padding: 10rpx 0;
+  font-size: 28rpx;
+  outline: none;
+  background: transparent;
+}
+.login-btn.data-v-461d1d79 {
+  width: 100%;
+  height: 90rpx;
+  line-height: 90rpx;
+  background-color: #d4a762;
+  color: #fff;
+  border-radius: 45rpx;
+  margin-top: 60rpx;
+  font-size: 32rpx;
+  border: none;
+}
+.login-btn[disabled].data-v-461d1d79 {
+  opacity: 0.6;
+}
+.footer.data-v-461d1d79 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50rpx;
+}
+.link.data-v-461d1d79 {
+  color: #d4a762;
+  font-size: 26rpx;
+  cursor: pointer;
+}
+
+/* 添加点击效果 */
+.link.data-v-461d1d79:active {
+  color: #d4a762;
+}
+page.data-v-461d1d79 {
+  background-color: #f8f1e9 !important;
+  min-height: 100vh;
+}
+.login-container.data-v-461d1d79 {
+  background-color: #f8f1e9;
+  min-height: 100vh;
+}
