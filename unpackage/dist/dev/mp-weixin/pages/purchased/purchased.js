@@ -71,8 +71,9 @@ const _sfc_main = {
         if (ordersRes.success && ordersRes.data) {
           const orders = ordersRes.data.filter((item) => item.status === 1);
           const productsRes = await utils_request.get("/product/featured");
+          const products = productsRes.data || productsRes;
           const productsMap = {};
-          productsRes.forEach((product) => {
+          products.forEach((product) => {
             productsMap[product.name] = product;
           });
           const courseCount = {};
@@ -87,7 +88,7 @@ const _sfc_main = {
             if (order.productName && productsMap[order.productName]) {
               productInfo = productsMap[order.productName];
             }
-            let imageUrl = "/static/images/default-product.png";
+            let imageUrl = "/static/images/course.png";
             if (productInfo && productInfo.imageUrl) {
               let rawImageUrl = productInfo.imageUrl;
               if (rawImageUrl && !rawImageUrl.startsWith("http") && !rawImageUrl.startsWith("/")) {
@@ -125,10 +126,10 @@ const _sfc_main = {
               teacherName
             };
           });
-          common_vendor.index.__f__("log", "at pages/purchased/purchased.vue:235", "已购买商品列表:", purchasedList.value);
+          common_vendor.index.__f__("log", "at pages/purchased/purchased.vue:238", "已购买商品列表:", purchasedList.value);
         }
       } catch (err) {
-        common_vendor.index.__f__("error", "at pages/purchased/purchased.vue:238", "加载已购商品失败:", err);
+        common_vendor.index.__f__("error", "at pages/purchased/purchased.vue:241", "加载已购商品失败:", err);
         common_vendor.index.showToast({
           title: "加载失败",
           icon: "none"
@@ -138,7 +139,7 @@ const _sfc_main = {
       }
     };
     const startLearning = (item) => {
-      common_vendor.index.__f__("log", "at pages/purchased/purchased.vue:249", "开始学习:", item);
+      common_vendor.index.__f__("log", "at pages/purchased/purchased.vue:252", "开始学习:", item);
       common_vendor.index.showModal({
         title: "开始学习",
         content: `确定开始学习《${item.name}》吗？
@@ -177,7 +178,7 @@ const _sfc_main = {
           });
         }, 1500);
       }
-      common_vendor.index.__f__("log", "at pages/purchased/purchased.vue:304", `课程 ${courseName} 进度更新: ${currentProgress}% -> ${newProgress}%`);
+      common_vendor.index.__f__("log", "at pages/purchased/purchased.vue:307", `课程 ${courseName} 进度更新: ${currentProgress}% -> ${newProgress}%`);
     };
     return (_ctx, _cache) => {
       return common_vendor.e({

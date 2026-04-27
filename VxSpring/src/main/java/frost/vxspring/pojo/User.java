@@ -8,6 +8,8 @@ import com.baomidou.mybatisplus.annotation.TableName;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
+import java.util.Date;
+
 @Data
 
 @TableName("wx_user")
@@ -21,6 +23,8 @@ public class User {
     private String userName;
     private String password;
     private String email;
+    @TableField("create_time")
+    private Date createTime;
     // 其他字段...
 
     public void setUser_id(Long user_id) {

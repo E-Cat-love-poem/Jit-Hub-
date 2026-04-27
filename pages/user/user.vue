@@ -55,7 +55,6 @@
 
 <script>
 import { ref } from 'vue'
-import { get } from '@/utils/request'
 
 export default {
   setup() {
@@ -67,39 +66,30 @@ export default {
       levelProgress: 0
     })
 
-    // 加载用户信息
-    const loadUserInfo = async () => {
-      try {
-        // 1. 从本地缓存获取登录信息
-        const cachedUserInfo = uni.getStorageSync('userInfo') || {}
-        const userId = cachedUserInfo.userId
-        console.log('用户ID:', userId)
-        
-        if (!userId) {
-          console.log('未检测到登录信息')
-          return
-        }
+    // 从本地缓存加载用户信息
+    const loadUserInfo = () => {
+      console.log('=== 从本地缓存加载用户信息 ===')
+      
+      const cachedUserInfo = uni.getStorageSync('userInfo') || {}
+      
+      console.log('缓存数据:', cachedUserInfo)
 
-        // 2. 调用API获取用户数据
-        const res = await get(`/user/info?userId=${Number(userId)}`)
-        console.log("完整响应:", res)
-
-        // 3. 更新页面数据
+      if (cachedUserInfo.userId) {
         userInfo.value = {
-          ...userInfo.value,
-          name: res.user_name || '未知用户',
-          userId: res.user_id,
-          level: 'Lv.3',
-          levelProgress: 65
+          name: cachedUserInfo.name || cachedUserInfo.userName || '已登录用户',
+          userId: cachedUserInfo.userId,
+          level: cachedUserInfo.level || 'Lv.3',
+          levelProgress: cachedUserInfo.levelProgress || 65
         }
         
-      } catch (error) {
-        console.error('加载用户信息失败:', error)
-        uni.showToast({
-          title: '加载用户信息失败: ' + (error.message || '未知错误'),
-          icon: 'none',
-          duration: 2000
-        })
+        console.log('用户页面显示:', userInfo.value)
+      } else {
+        userInfo.value = {
+          name: '未登录用户',
+          userId: '--',
+          level: 'Lv.0',
+          levelProgress: 0
+        }
       }
     }
 
@@ -113,9 +103,9 @@ export default {
 
     // 跳转到订单页面
     const navigateToOrder = () => {
-      uni.switchTab({
-        url: '/pages/shop/shop',
-        success: () => console.log('跳转到订单页'),
+      uni.navigateTo({
+        url: '/pages/purchased/purchased',
+        success: () => console.log('跳转到课程页'),
         fail: (err) => {
           console.log('跳转失败:', err)
           uni.showToast({
@@ -126,11 +116,11 @@ export default {
       })
     }
 
-    // 跳转到地址管理
+    // 跳转到主页
     const navigateToAddress = () => {
       uni.switchTab({
-        url: '/pages/yue/yue',
-        success: () => console.log('跳转到地址管理'),
+        url: '/pages/Home/Home',
+        success: () => console.log('跳转到主页'),
         fail: (err) => {
           console.log('跳转失败:', err)
           uni.showToast({
@@ -161,7 +151,6 @@ export default {
       const newCount = clickCount.value + 1
       clickCount.value = newCount
       
-      // 使用对象映射替代switch-case
       const eggActions = {
         1: () => showModal('我知道你是手滑', '别点昂，点了你项目组长会发出尖锐爆鸣声~'),
         3: () => showModal('🤬 你还点呢？！', '别点了，项目崩了你负责吗？！'),
@@ -199,6 +188,7 @@ export default {
 
     return {
       userInfo,
+      loadUserInfo,
       navigateToEditProfile,
       navigateToOrder,
       navigateToAddress,
@@ -207,47 +197,12 @@ export default {
     }
   },
 
-  // uni-app 生命周期钩子
   onLoad() {
     this.loadUserInfo()
   },
 
   onShow() {
-    // 每次页面显示都刷新数据
     this.loadUserInfo()
-  },
-
-  methods: {
-    // 将setup中的函数也暴露给options API
-    loadUserInfo() {
-      // 这里需要访问setup返回的userInfo，所以需要重新实现
-      const cachedUserInfo = uni.getStorageSync('userInfo') || {}
-      const userId = cachedUserInfo.userId
-      
-      if (!userId) {
-        console.log('未检测到登录信息')
-        return
-      }
-
-      get(`/user/info?userId=${Number(userId)}`)
-        .then(res => {
-          this.userInfo = {
-            ...this.userInfo,
-            name: res.user_name || '未知用户',
-            userId: res.user_id,
-            level: 'Lv.3',
-            levelProgress: 65
-          }
-        })
-        .catch(error => {
-          console.error('加载用户信息失败:', error)
-          uni.showToast({
-            title: '加载用户信息失败',
-            icon: 'none',
-            duration: 2000
-          })
-        })
-    }
   }
 }
 </script>
@@ -365,5 +320,4 @@ export default {
     padding: 30rpx 60rpx;
   }
 }
-
 </style>

@@ -1,10 +1,12 @@
 package frost.vxspring.pojo;
 
+import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 import java.math.BigDecimal;
 import java.util.Date;
 
 @Data
+@TableName("product")
 public class Product {
     private Integer id;
     private String name;

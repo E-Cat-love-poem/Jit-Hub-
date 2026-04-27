@@ -16,7 +16,7 @@ public interface UserMapper extends BaseMapper<User> {
             @Result(column = "email", property = "email"),
             @Result(column = "password", property = "password")
     })
-    @Select("SELECT user_id, user_name, email, password FROM wx_user WHERE (user_name = #{account} OR email = #{account}) AND password = #{password}")
+    @Select("SELECT user_id, user_name, email, password FROM wx_user WHERE user_name = #{account} AND password = #{password}")
     User selectForLogin(@Param("account") String account, @Param("password") String password);
 
 }

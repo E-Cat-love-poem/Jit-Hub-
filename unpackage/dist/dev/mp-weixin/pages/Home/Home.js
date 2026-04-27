@@ -55,7 +55,8 @@ const _sfc_main = {
       isLoading.value = true;
       try {
         const res = await utils_request.get("/product/featured");
-        featuredCrafts.value = res.map((item) => {
+        const productList = res.data || res;
+        featuredCrafts.value = productList.map((item) => {
           let imageUrl = item.imageUrl || "";
           if (imageUrl && !imageUrl.startsWith("http") && !imageUrl.startsWith("/")) {
             imageUrl = `/static/images/${imageUrl}`;
@@ -78,7 +79,7 @@ const _sfc_main = {
           };
         });
       } catch (err) {
-        common_vendor.index.__f__("error", "at pages/Home/Home.vue:241", "加载特色商品失败:", err);
+        common_vendor.index.__f__("error", "at pages/Home/Home.vue:244", "加载特色商品失败:", err);
         common_vendor.index.showToast({
           title: "加载失败",
           icon: "none"
@@ -100,10 +101,11 @@ const _sfc_main = {
       }
       isLoading.value = true;
       try {
-        const products = await utils_request.get("/product/search", {
+        const res = await utils_request.get("/product/search", {
           keyword: searchText.value
         });
-        common_vendor.index.__f__("log", "at pages/Home/Home.vue:273", "搜索结果:", products);
+        common_vendor.index.__f__("log", "at pages/Home/Home.vue:276", "搜索结果:", res);
+        const products = res.data || res;
         searchResults.value = products.map((item) => {
           let imageUrl = item.imageUrl || "";
           if (imageUrl && !imageUrl.startsWith("http") && !imageUrl.startsWith("/")) {
@@ -126,7 +128,7 @@ const _sfc_main = {
         });
         showSearchResults.value = true;
       } catch (err) {
-        common_vendor.index.__f__("error", "at pages/Home/Home.vue:308", "搜索失败:", err);
+        common_vendor.index.__f__("error", "at pages/Home/Home.vue:314", "搜索失败:", err);
         common_vendor.index.showToast({
           title: "搜索失败",
           icon: "none"
@@ -233,7 +235,7 @@ const _sfc_main = {
         confirmText: "我知道了",
         success: (res) => {
           if (res.confirm) {
-            common_vendor.index.__f__("log", "at pages/Home/Home.vue:441", "用户点击了我知道了");
+            common_vendor.index.__f__("log", "at pages/Home/Home.vue:447", "用户点击了我知道了");
           }
         }
       });
