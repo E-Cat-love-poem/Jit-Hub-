@@ -1,6 +1,5 @@
 "use strict";
 const common_vendor = require("../../common/vendor.js");
-const utils_request = require("../../utils/request.js");
 const common_assets = require("../../common/assets.js");
 const _sfc_main = {
   setup() {
@@ -11,18 +10,39 @@ const _sfc_main = {
       level: "Lv.0",
       levelProgress: 0
     });
+    const loadUserInfo = () => {
+      common_vendor.index.__f__("log", "at pages/user/user.vue:71", "=== 从本地缓存加载用户信息 ===");
+      const cachedUserInfo = common_vendor.index.getStorageSync("userInfo") || {};
+      common_vendor.index.__f__("log", "at pages/user/user.vue:75", "缓存数据:", cachedUserInfo);
+      if (cachedUserInfo.userId) {
+        userInfo.value = {
+          name: cachedUserInfo.name || cachedUserInfo.userName || "已登录用户",
+          userId: cachedUserInfo.userId,
+          level: cachedUserInfo.level || "Lv.3",
+          levelProgress: cachedUserInfo.levelProgress || 65
+        };
+        common_vendor.index.__f__("log", "at pages/user/user.vue:85", "用户页面显示:", userInfo.value);
+      } else {
+        userInfo.value = {
+          name: "未登录用户",
+          userId: "--",
+          level: "Lv.0",
+          levelProgress: 0
+        };
+      }
+    };
     const navigateToEditProfile = () => {
       common_vendor.index.navigateTo({
         url: "/pages/about/about",
-        success: () => common_vendor.index.__f__("log", "at pages/user/user.vue:110", "跳转到关于页面")
+        success: () => common_vendor.index.__f__("log", "at pages/user/user.vue:100", "跳转到关于页面")
       });
     };
     const navigateToOrder = () => {
-      common_vendor.index.switchTab({
-        url: "/pages/shop/shop",
-        success: () => common_vendor.index.__f__("log", "at pages/user/user.vue:118", "跳转到订单页"),
+      common_vendor.index.navigateTo({
+        url: "/pages/purchased/purchased",
+        success: () => common_vendor.index.__f__("log", "at pages/user/user.vue:108", "跳转到课程页"),
         fail: (err) => {
-          common_vendor.index.__f__("log", "at pages/user/user.vue:120", "跳转失败:", err);
+          common_vendor.index.__f__("log", "at pages/user/user.vue:110", "跳转失败:", err);
           common_vendor.index.showToast({
             title: "跳转失败",
             icon: "none"
@@ -32,10 +52,10 @@ const _sfc_main = {
     };
     const navigateToAddress = () => {
       common_vendor.index.switchTab({
-        url: "/pages/yue/yue",
-        success: () => common_vendor.index.__f__("log", "at pages/user/user.vue:133", "跳转到地址管理"),
+        url: "/pages/Home/Home",
+        success: () => common_vendor.index.__f__("log", "at pages/user/user.vue:123", "跳转到主页"),
         fail: (err) => {
-          common_vendor.index.__f__("log", "at pages/user/user.vue:135", "跳转失败:", err);
+          common_vendor.index.__f__("log", "at pages/user/user.vue:125", "跳转失败:", err);
           common_vendor.index.showToast({
             title: "跳转失败",
             icon: "none"
@@ -51,7 +71,7 @@ const _sfc_main = {
         confirmText: "我知道了",
         success: (res) => {
           if (res.confirm) {
-            common_vendor.index.__f__("log", "at pages/user/user.vue:153", "用户点击了我知道了");
+            common_vendor.index.__f__("log", "at pages/user/user.vue:143", "用户点击了我知道了");
           }
         }
       });
@@ -70,7 +90,7 @@ const _sfc_main = {
             common_vendor.index.navigateTo({
               url: "/pages/Login/Login",
               fail: (err) => {
-                common_vendor.index.__f__("log", "at pages/user/user.vue:175", "跳转到404失败:", err);
+                common_vendor.index.__f__("log", "at pages/user/user.vue:164", "跳转到404失败:", err);
               }
             });
           });
@@ -94,6 +114,7 @@ const _sfc_main = {
     };
     return {
       userInfo,
+      loadUserInfo,
       navigateToEditProfile,
       navigateToOrder,
       navigateToAddress,
@@ -101,39 +122,11 @@ const _sfc_main = {
       handleEasterEgg
     };
   },
-  // uni-app 生命周期钩子
   onLoad() {
     this.loadUserInfo();
   },
   onShow() {
     this.loadUserInfo();
-  },
-  methods: {
-    // 将setup中的函数也暴露给options API
-    loadUserInfo() {
-      const cachedUserInfo = common_vendor.index.getStorageSync("userInfo") || {};
-      const userId = cachedUserInfo.userId;
-      if (!userId) {
-        common_vendor.index.__f__("log", "at pages/user/user.vue:228", "未检测到登录信息");
-        return;
-      }
-      utils_request.get(`/user/info?userId=${Number(userId)}`).then((res) => {
-        this.userInfo = {
-          ...this.userInfo,
-          name: res.user_name || "未知用户",
-          userId: res.user_id,
-          level: "Lv.3",
-          levelProgress: 65
-        };
-      }).catch((error) => {
-        common_vendor.index.__f__("error", "at pages/user/user.vue:243", "加载用户信息失败:", error);
-        common_vendor.index.showToast({
-          title: "加载用户信息失败",
-          icon: "none",
-          duration: 2e3
-        });
-      });
-    }
   }
 };
 function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {

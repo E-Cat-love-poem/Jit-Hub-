@@ -107,8 +107,11 @@ export default {
      try {
        const res = await get(`/product/detail/${productId.value}`)
        
+       // 处理后端返回的格式 {code, data, message}
+       const data = res.data || res
+       
        // 处理图片URL - 增加相对路径处理
-       let imageUrl = res.imageUrl || ''
+       let imageUrl = data.imageUrl || ''
        
        // 1. 处理相对路径，如 "logo.png"
        if (imageUrl && !imageUrl.startsWith('http') && !imageUrl.startsWith('/')) {
@@ -122,23 +125,23 @@ export default {
        }
        // 3. 处理空值或无效值
        else if (!imageUrl || imageUrl === 'null' || imageUrl === 'undefined') {
-         imageUrl = '/static/images/default-product.png'
+         imageUrl = '/static/images/course.png'
        }
        
        product.value = {
-         id: res.id,
-         name: res.name,
+         id: data.id,
+         name: data.name,
          imageUrl: imageUrl,  // 使用处理后的URL
-         price: res.price,
-         origin: res.origin || '未知',
-         categoryName: res.categoryName || '未知',
-         detail_desc: res.detailDesc || '暂无信息',
-         short_desc: res.shortDesc || '<p>暂无信息</p>'
+         price: data.price,
+         origin: data.origin || '未知',
+         categoryName: data.categoryName || '未知',
+         detail_desc: data.detailDesc || '暂无信息',
+         short_desc: data.shortDesc || '<p>暂无信息</p>'
        }
        
        // uni-app中rich-text需要特定格式
-       if (res.shortDesc && !res.shortDesc.startsWith('<')) {
-         product.value.short_desc = `<div>${res.shortDesc}</div>`
+       if (data.shortDesc && !data.shortDesc.startsWith('<')) {
+         product.value.short_desc = `<div>${data.shortDesc}</div>`
        }
        
      } catch (err) {

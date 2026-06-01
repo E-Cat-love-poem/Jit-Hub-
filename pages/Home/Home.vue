@@ -205,7 +205,10 @@ const loadFeaturedProducts = async () => {
   try {
     const res = await get('/product/featured')
     
-    featuredCrafts.value = res.map(item => {
+    // 处理后端返回的格式 {code, data, message}
+    const productList = res.data || res
+    
+    featuredCrafts.value = productList.map(item => {
       // 处理图片URL
       let imageUrl = item.imageUrl || ''
       
@@ -267,10 +270,13 @@ const onSearch = async () => {
   isLoading.value = true
   
   try {
-    const products = await get('/product/search', { 
+    const res = await get('/product/search', { 
       keyword: searchText.value 
     })
-    console.log('搜索结果:', products)
+    console.log('搜索结果:', res)
+    
+    // 处理后端返回的格式 {code, data, message}
+    const products = res.data || res
     
     // 使用和特色商品相同的图片处理逻辑
     searchResults.value = products.map(item => {

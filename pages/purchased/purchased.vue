@@ -163,8 +163,11 @@ const loadPurchasedProducts = async () => {
       // 获取所有商品数据
       const productsRes = await get('/product/featured')
       
+      // 处理后端返回的格式 {code, data, message}
+      const products = productsRes.data || productsRes
+      
       const productsMap = {}
-      productsRes.forEach(product => {
+      products.forEach(product => {
         productsMap[product.name] = product
       })
       
@@ -182,7 +185,7 @@ const loadPurchasedProducts = async () => {
           productInfo = productsMap[order.productName]
         }
         
-        let imageUrl = '/static/images/default-product.png'
+        let imageUrl = '/static/images/course.png'
         if (productInfo && productInfo.imageUrl) {
           let rawImageUrl = productInfo.imageUrl
           

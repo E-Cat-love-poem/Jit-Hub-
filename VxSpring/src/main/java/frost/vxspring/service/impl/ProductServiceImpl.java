@@ -15,15 +15,11 @@ public class ProductServiceImpl extends ServiceImpl<ProductMapper, Product>
 
     @Override
     public List<Product> getFeaturedProducts() {
-        // 方式1：直接调用Mapper自定义方法
-        return baseMapper.selectFeaturedProducts();
-
-        // 方式2：使用LambdaQueryWrapper (MyBatis-Plus风格)
-        // return lambdaQuery()
-        //     .eq(Product::getStatus, 1)
-        //     .orderByDesc(Product::getCreateTime)
-        //     .last("LIMIT 6")
-        //     .list();
+        // 云函数版本不限制status，只按创建时间倒序
+        return lambdaQuery()
+            .orderByDesc(Product::getCreateTime)
+            .last("LIMIT 20")
+            .list();
     }
 
     @Override

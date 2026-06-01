@@ -41,31 +41,32 @@ const _sfc_main = {
       isLoading.value = true;
       try {
         const res = await utils_request.get(`/product/detail/${productId.value}`);
-        let imageUrl = res.imageUrl || "";
+        const data = res.data || res;
+        let imageUrl = data.imageUrl || "";
         if (imageUrl && !imageUrl.startsWith("http") && !imageUrl.startsWith("/")) {
           imageUrl = `/static/images/${imageUrl}`;
         } else if (imageUrl.includes("localhost:8090") || imageUrl.includes("localhost")) {
           const filename = imageUrl.split("/").pop();
           imageUrl = `/static/images/${filename}`;
         } else if (!imageUrl || imageUrl === "null" || imageUrl === "undefined") {
-          imageUrl = "/static/images/default-product.png";
+          imageUrl = "/static/images/course.png";
         }
         product.value = {
-          id: res.id,
-          name: res.name,
+          id: data.id,
+          name: data.name,
           imageUrl,
           // 使用处理后的URL
-          price: res.price,
-          origin: res.origin || "未知",
-          categoryName: res.categoryName || "未知",
-          detail_desc: res.detailDesc || "暂无信息",
-          short_desc: res.shortDesc || "<p>暂无信息</p>"
+          price: data.price,
+          origin: data.origin || "未知",
+          categoryName: data.categoryName || "未知",
+          detail_desc: data.detailDesc || "暂无信息",
+          short_desc: data.shortDesc || "<p>暂无信息</p>"
         };
-        if (res.shortDesc && !res.shortDesc.startsWith("<")) {
-          product.value.short_desc = `<div>${res.shortDesc}</div>`;
+        if (data.shortDesc && !data.shortDesc.startsWith("<")) {
+          product.value.short_desc = `<div>${data.shortDesc}</div>`;
         }
       } catch (err) {
-        common_vendor.index.__f__("error", "at pages/detail/detail.vue:145", "加载商品详情失败:", err);
+        common_vendor.index.__f__("error", "at pages/detail/detail.vue:148", "加载商品详情失败:", err);
         common_vendor.index.showToast({
           title: "加载失败，请重试",
           icon: "none"
@@ -139,7 +140,7 @@ const _sfc_main = {
           });
         }
       } catch (error) {
-        common_vendor.index.__f__("error", "at pages/detail/detail.vue:224", "创建订单失败:", error);
+        common_vendor.index.__f__("error", "at pages/detail/detail.vue:227", "创建订单失败:", error);
         common_vendor.index.hideLoading();
         common_vendor.index.showToast({
           title: ((_a = error.data) == null ? void 0 : _a.message) || "创建订单失败",
